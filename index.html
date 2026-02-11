@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Moedas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>💱 Conversor de Moedas</h1>
+      <p>Usa cotações reais (Frankfurter / ECB). Salva suas últimas escolhas.</p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <label class="field">
+          <span>Valor</span>
+          <input id="amount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ex: 100" />
+        </label>
+
+        <button id="swap" class="btn btn-ghost" type="button" title="Inverter moedas">↔</button>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>De</span>
+          <select id="from"></select>
+        </label>
+
+        <label class="field">
+          <span>Para</span>
+          <select id="to"></select>
+        </label>
+      </div>
+
+      <div class="row">
+        <button id="convert" class="btn btn-primary" type="button">Converter</button>
+        <button id="refresh" class="btn" type="button" title="Atualizar cotação">Atualizar cotação</button>
+      </div>
+
+      <div class="result">
+        <div class="big" id="resultText">—</div>
+        <div class="meta" id="rateText">—</div>
+      </div>
+
+      <div class="status">
+        <span id="badge" class="badge">Pronto</span>
+        <span id="updated" class="updated">—</span>
+      </div>
+
+      <p id="error" class="error" hidden></p>
+    </section>
+
+    <footer class="footer">
+      <small>Projeto para portfólio • HTML/CSS/JS + fetch + LocalStorage</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
